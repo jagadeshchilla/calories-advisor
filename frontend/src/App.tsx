@@ -4,6 +4,7 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import AnalysisPage from './pages/AnalysisPage';
 import SettingsPage from './pages/SettingsPage';
+import WebcamDemoPage from './pages/WebcamDemoPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/analyze" element={<AnalysisPage />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/webcam-demo" element={<WebcamDemoPage />} />
           </Routes>
         </main>
       </div>

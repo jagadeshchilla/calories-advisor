@@ -87,6 +87,22 @@ response = requests.post(url, files=files)
 print(response.json())
 ```
 
+## Frontend Features
+
+### Webcam Capture (ChatGPT/Gemini Style)
+- **Real-time Camera Access**: High-quality video feed with automatic camera detection
+- **Tap to Capture**: Click anywhere on the video to capture images instantly
+- **Camera Switching**: Seamlessly switch between front and back cameras
+- **Mobile Optimized**: Prefers back camera on mobile devices for better food photography
+- **Error Handling**: Graceful fallbacks with user-friendly error messages
+- **Cross-Platform**: Works on desktop, mobile, and tablet devices
+
+### User Interface
+- **Modern Design**: Beautiful, responsive UI with smooth animations
+- **Drag & Drop**: Intuitive file upload with drag-and-drop support
+- **Real-time Preview**: Instant image preview before analysis
+- **Progressive Enhancement**: Works with or without camera access
+
 ## Migration from Streamlit
 
 This FastAPI version replaces the original Streamlit application with:
@@ -95,3 +111,4 @@ This FastAPI version replaces the original Streamlit application with:
 - JSON responses instead of Streamlit widgets
 - CORS middleware for frontend integration
 - Proper error handling and validation
+- Advanced webcam capture functionality similar to ChatGPT and Gemini

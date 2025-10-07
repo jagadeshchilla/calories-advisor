@@ -16,6 +16,7 @@ const AnalysisPage: React.FC = () => {
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isWebcamOpen, setIsWebcamOpen] = useState(false);
   
   const headerRef = useRef<HTMLElement>(null);
   const uploadRef = useRef<HTMLDivElement>(null);
@@ -125,7 +126,12 @@ const AnalysisPage: React.FC = () => {
         {/* Upload Section */}
         {!selectedFile && (
           <div ref={uploadRef} className="mb-6 sm:mb-8 md:mb-12 lg:mb-16">
-            <FileUpload onFileSelect={handleFileSelect} isLoading={isLoading} />
+            <FileUpload 
+              onFileSelect={handleFileSelect} 
+              isLoading={isLoading}
+              onWebcamOpen={() => setIsWebcamOpen(true)}
+              onWebcamClose={() => setIsWebcamOpen(false)}
+            />
           </div>
         )}
 
@@ -188,7 +194,7 @@ const AnalysisPage: React.FC = () => {
         )}
 
         {/* Tips Section */}
-        {!result && !isLoading && (
+        {!result && !isLoading && !isWebcamOpen && (
           <section ref={tipsRef} className="mt-12 sm:mt-16 md:mt-20 lg:mt-24 max-w-5xl mx-auto">
             <div className="relative">
               {/* Background decoration */}

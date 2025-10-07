@@ -76,9 +76,12 @@ const HomePage: React.FC = () => {
                 <ArrowRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 ml-2 xs:ml-3 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               
-              <button className="group btn-secondary text-sm xs:text-base sm:text-lg px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 w-full xs:w-auto min-w-[200px] xs:min-w-[220px] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <span className="group-hover:text-primary-600 transition-colors duration-300">Learn More</span>
-              </button>
+              <Link
+                to="/webcam-demo"
+                className="group btn-secondary text-sm xs:text-base sm:text-lg px-6 xs:px-8 sm:px-10 py-3 xs:py-4 sm:py-5 w-full xs:w-auto min-w-[200px] xs:min-w-[220px] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <span className="group-hover:text-primary-600 transition-colors duration-300">Try Webcam Demo</span>
+              </Link>
             </div>
           </div>
         </div>
