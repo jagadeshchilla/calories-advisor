@@ -214,11 +214,14 @@ const WebcamCapture: React.FC<WebcamCaptureProps> = ({ onCapture, onClose, isLoa
   // Auto-start camera when component mounts
   useEffect(() => {
     startCamera();
+    
+    // Capture the current timeout value at the time of effect creation
+    const currentTimeout = captureTimeoutRef.current;
+    
     return () => {
       stopCamera();
-      const timeoutId = captureTimeoutRef.current;
-      if (timeoutId) {
-        clearTimeout(timeoutId);
+      if (currentTimeout) {
+        clearTimeout(currentTimeout);
       }
     };
   }, [startCamera, stopCamera]);
