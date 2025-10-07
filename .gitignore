@@ -6,10 +6,10 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Production builds
-/frontend/build/
-/frontend/dist/
-/frontend/.next/
-/frontend/out/
+build/
+dist/
+.next/
+out/
 
 # Environment variables
 .env
@@ -123,7 +123,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# public  # Commented out - React apps need public folder
 
 # Storybook build outputs
 .out
